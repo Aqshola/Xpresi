@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 100%;
+  font-family: "Poppins", sans-serif;
+  max-width: 1280px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  min-height: 100vh;
+}
+.illust {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-detail {
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.illust svg {
+  width: 100%;
+}
+
+.web-title {
+  font-size: 48px;
+}
+
+.btn {
+  cursor: pointer;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  border: 0;
+  outline: 0;
+  margin-top: 10px;
+  font-size: 16px;
+  box-shadow: 0px 12px 24px -12px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 12px 24px -12px rgba(0, 0, 0, 0.5);
+}
+
+.btn:active {
+  box-shadow: none;
+}
+
+.content {
+  min-height: 100vh;
+}
+.tool {
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 20px;
+}
+
+#webcam-container {
+  margin-top: 10px;
+  width: 300px;
+  height: 300px;
+  display: block;
+  border: 2px solid black;
+}
+
+.hasil-title {
+  margin-top: 20px;
+}
+.hasil-result {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.detail-title {
+  margin-top: 30px;
+}
+
+.detail-result {
+  margin-top: 10px;
+}
+
+.btn-stop {
+  cursor: pointer;
+  width: fit-content;
+  padding: 10px 20px;
+  border: 1px solid black;
+  background-color: white;
+
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 50px;
+  outline: 0;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.loading {
+  display: none;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  display: block;
+  border-radius: 50%;
+  border: 10px solid lightgray;
+  border-top: 10px solid black;
+  margin-bottom: 20px;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
