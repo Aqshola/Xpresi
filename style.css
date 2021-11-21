@@ -140,11 +140,15 @@ div {
   animation: spin 0.7s linear infinite;
 }
 
-@keyframes spin {
+.face {
+  animation: easing 0.3s ease-in-out;
+}
+
+@keyframes easing {
   0% {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   100% {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
