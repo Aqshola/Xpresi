@@ -1,4 +1,4 @@
-const URL = "https://teachablemachine.withgoogle.com/models/RGU8LdssA/";
+const URL = "https://teachablemachine.withgoogle.com/models/JX4DggNYV/";
 
 let model, webcam, labelContainer, maxPredictions;
 const flip = true; // whether to flip the webcam
