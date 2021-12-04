@@ -16,11 +16,15 @@ function init() {
       document.body.append(canvas);
       const displaySize = { width: video.width, height: video.height };
       faceapi.matchDimensions(canvas, displaySize);
-      setInterval(async () => {
+      const loopDetect = setInterval(async () => {
         const detections = await faceapi
           .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
           .withFaceExpressions();
         getResult(detections);
+
+        if (!boolStart) {
+          clearInterval(loopDetect);
+        }
       }, 500);
     });
   }
