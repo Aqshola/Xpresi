@@ -20,6 +20,8 @@ function init() {
       getResult(detections);
     }, 500);
   });
+
+  document.querySelector(".btn-stop").addEventListener("click", stopVideo);
 }
 
 function startVideo() {
@@ -67,5 +69,16 @@ const appendDetail = (arr = []) => {
 
 const displayTool = () => {
   document.querySelector(".tool").style.display = "flex";
+  document.querySelector(".loading").style.display = "none";
+};
+
+const stopVideo = () => {
+  const mediaStream = video.srcObject;
+  const tracks = mediaStream.getTracks();
+  tracks[0].stop();
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+
+  document.querySelector(".tool").style.display = "none";
   document.querySelector(".loading").style.display = "none";
 };
