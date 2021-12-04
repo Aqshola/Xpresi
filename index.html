@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xpresi</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="face-api.min.js"></script>
+    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -56,31 +58,26 @@
             <div class="tool">
                 <div class="tool-box">
                     <h1>Coba ngaca disini</h1>
-                    <div id="webcam-container"></div>
-
+                    <!-- <div id="webcam-container"></div> -->
+                    <video id="video" width="300" height="300" autoplay muted></video>
                 </div>
                 <div class="tool-desc">
                     <div>
-
                         <h2 class="hasil-title">Hasil</h2>
-                        <p class="hasil-result">Belum ada hasil</p>
+                        <p class="hasil-result">Mencari wajah...</p>
                     </div>
                     <div>
 
                         <h2 class="detail-title">Detail</h2>
-                        <div class="detail-result" id="label-container"></div>
+                        <div class="detail-result" id="detail-container"></div>
                     </div>
-                    <button class="btn-stop" type="button" onclick="stop()">Stop</button>
+                    <button class="btn-stop" type="button">Stop</button>
                 </div>
-
-
             </div>
 
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-    <script src="./handleDetect.js"></script>
+    
     <script src="./animating.js"></script>
 </body>
 
